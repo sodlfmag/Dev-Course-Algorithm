@@ -25,7 +25,7 @@ function dfs(arr, depth, start) {
         if(visited[i]) continue // 이미 방문했다면 넘어가기
         selected.push(i) // 방문하지 않았다면 선택하기 
         visited[i] = true // 선택한 요소를 방문 처리 하기
-        dfs(arr, depth + 1, i + 1) // 재귀함수를 이용하여 다음 인덱스 넣기
+        dfs(arr, depth + 1, i + 1) // 재귀함수를 이용하여 다음 요소의 인덱스 호출하기
         selected.pop()
         visited[i] = false
     }
