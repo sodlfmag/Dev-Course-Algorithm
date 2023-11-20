@@ -19,3 +19,19 @@
 - (선택) 어려웠던 부분
 
 유형별 폴더 정리나 개인적으로 변경할 부분은 유동적으로 해 주셔도 될 것 같습니다.
+---
+### My Commit Form
+* example
+    * solution.py
+
+        `Author: do0ori, Language: python, Title: 코딩테스트 연습 > 연습문제 > 시저 암호 - Level 1`
+
+    * solution.js
+
+        `Author: do0ori, Language: javascript, Title: 코딩테스트 연습 > 연습문제 > 시저 암호 - Level 1`
+    
+    * README.md
+
+        `코딩테스트 연습 > 연습문제 > 시저 암호 - Level 1`
+
+> 문제 풀이는 solution 파일 내부에 주석으로 작성
