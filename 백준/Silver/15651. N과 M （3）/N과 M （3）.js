@@ -18,7 +18,7 @@ function dfs(arr, depth) {
         answer += "\n"
         return
     }
-    for(let i = 0; i < arr.length; i++) {
+    for(let i = 0; i < arr.length; i++) { // 중복된 수도 포함
         selected.push(i)
         dfs(arr, depth + 1)
         selected.pop()
