@@ -2,7 +2,7 @@
 import re
 def solution(new_id):
     new_id = new_id.lower()                     # step 1
-    new_id = re.sub('[^-\._a-z0-9]', '', new_id)# step 2
+    new_id = re.sub('[^-\.\w]', '', new_id)     # step 2 (\w = [a-zA-Z0-9_])
     new_id = re.sub('\.{2,}', '.', new_id)      # step 3
     new_id = re.sub('^\.|\.$', '', new_id)      # step 4
     new_id = 'a' if not new_id else new_id[:15] # step 5
