@@ -13,7 +13,7 @@ let jihoon = [];
 let fire = [];
 for (let i = 1; i <= row; i++) {
   let tmp = input[i].trim().split("");
-  maze.push(tmp);
+  maze.push(tmp); // maze.push([...tmp])로 했다가 시간초과 걸려서 1시간 순삭..;
 
   if (tmp.includes("J")) {
     let j = tmp.indexOf("J");
@@ -64,11 +64,13 @@ const jihoonBFS = () => {
     new Array(col).fill(Infinity)
   );
   const q = [];
-  q.push([...jihoon]);
+  q.push(jihoon);
   time_jihoon[jihoon[0]][jihoon[1]] = 0;
 
   while (q.length > 0) {
     let [x, y] = q.shift();
+
+    // 반복문 탈출 조건 check point!
     if (x === row - 1 || x === 0 || y === col - 1 || y === 0)
       return time_jihoon[x][y] + 1;
 
