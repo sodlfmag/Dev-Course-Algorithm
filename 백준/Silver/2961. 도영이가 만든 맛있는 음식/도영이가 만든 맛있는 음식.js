@@ -9,11 +9,11 @@ for (let i = 1; i <= n; i++) {
 }
 
 let visited = new Array(n).fill(false);
-let result = []; // 조합 길이에 따른 결과값
+let result = []; // 조합 결과
 let answer = 1e9;
 
 function dfs(depth, start) {
-  // 모든 길이, 모든 조합 중 최솟값을 구하라
+  // 모든 길이의 모든 조합 중 최솟값을 구하라
   if (depth >= 1) {
     let totalSourTaste = 1;
     let totalBitterTaste = 0;
@@ -29,7 +29,7 @@ function dfs(depth, start) {
     start를 사용하면 프로그램이 이미 선택한 것 이후의 것만 살펴보며 조합하여 
     중복 없이 효율적으로 원하는 결과를 얻을 수 있다
   */
-  for (let i = start; i < n; i++) { 
+  for (let i = start; i < n; i++) {
     if (visited[i]) continue;
     visited[i] = true;
     result.push(i);
