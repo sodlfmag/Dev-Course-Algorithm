@@ -12,7 +12,7 @@ let visited = new Array(n).fill(false);
 let result = []; // 조합 길이에 따른 결과값
 let answer = 1e9;
 
-function dfs(depth) {
+function dfs(depth, start) {
   // 모든 길이, 모든 조합 중 최솟값을 구하라
   if (depth >= 1) {
     let totalSourTaste = 1;
@@ -24,15 +24,20 @@ function dfs(depth) {
     }
     answer = Math.min(answer, Math.abs(totalSourTaste - totalBitterTaste));
   }
-  for (let i = 0; i < n; i++) {
+  /*
+    새로운 조합을 찾을 때마다, 선택한 맛 이후의 맛만 고려
+    start를 사용하면 프로그램이 이미 선택한 것 이후의 것만 살펴보며 조합하여 
+    중복 없이 효율적으로 원하는 결과를 얻을 수 있다
+  */
+  for (let i = start; i < n; i++) { 
     if (visited[i]) continue;
     visited[i] = true;
     result.push(i);
-    dfs(depth + 1);
+    dfs(depth + 1, i + 1);
     visited[i] = false;
     result.pop();
   }
 }
 
-dfs(0);
+dfs(0, 0);
 console.log(answer);
