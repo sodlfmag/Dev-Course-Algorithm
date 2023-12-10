@@ -1,7 +1,8 @@
 # import os
-# import sys
+import sys
 # sys.stdin = open(os.getcwd()+"\\input.txt", "rt")
 from collections import deque
+input = sys.stdin.readline
 
 T = int(input())
 while T:
