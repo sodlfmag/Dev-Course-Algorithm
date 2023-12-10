@@ -35,6 +35,6 @@ while T:
         y_ = y + dt[i][1]
         if check(x_, y_) and not visited[x_][y_]:
           visited[x_][y_] = True
-          dq.append([x_, y_, cnt + 1])
+          dq.append((x_, y_, cnt + 1))
   print(BFS())
   
