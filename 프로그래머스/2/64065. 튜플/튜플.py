@@ -1,4 +1,4 @@
-# s의 길이는 최대 100만이므로 시간 복잡도는 O(nlogn) 미만 (가급적 $O(n)$ 정도로)
+# s의 길이는 최대 100만이므로 시간 복잡도는 O(nlogn) 미만 (가급적 O(n) 정도로)
 def solution(s):
     answer = {}
     s = sorted(s[2:-2].split("},{"), key=len)   # O(nlogn)
