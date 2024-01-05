@@ -45,7 +45,7 @@ def BFS():
 
         if  check(xx_, yy_) and board[xx_][yy_] == 0 and move[cnt + 1][xx_][yy_] > move[cnt][x][y] + 1:
           move[cnt + 1][xx_][yy_] = move[cnt][x][y] + 1
-          dq.append([xx_, yy_, cnt + 1])
+          dq.append((xx_, yy_, cnt + 1))
 
 BFS()
 res = float("inf")
